@@ -22,11 +22,19 @@ namespace HPACodeChallenge
             //By Name of the Element and operation
             IWebElement button = driver.FindElement(By.Id("Box1"));
             button.Click();
+
+            //Approval for Alert//
             IAlert alert = driver.SwitchTo().Alert();
             alert.Accept();
+
+
             IWebElement box2 = driver.FindElement(By.Id("Box3"));
             box2.Click();
-            box2.SendKeys("%{Tab}");
+            box2.SendKeys(Keys.Tab);
+
+            //Approval for Alert//
+            IAlert alert2 = driver.SwitchTo().Alert();
+            alert2.Accept();
 
 
 

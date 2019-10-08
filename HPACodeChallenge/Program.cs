@@ -39,20 +39,49 @@ namespace HPACodeChallenge
             IAlert alert2 = driver.SwitchTo().Alert();
             alert2.Accept();
 
+
+            //find the span Id//
             IWebElement elem = driver.FindElement(By.XPath("//span[@id='optionVal']"));
+
+            //Extract the TextContent From SpanTag and put it in a Var//
             string myText = (string)((IJavaScriptExecutor)driver).ExecuteScript("return arguments[0].firstChild.textContent;", elem);
 
-
+            //Target the Var as Value//
             IWebElement oCheckBox = driver.FindElement(By.CssSelector($"input[value='{myText}']"));
-
             oCheckBox.Click();
 
+            //Approval for Alert step3//
+            IAlert alert3 = driver.SwitchTo().Alert();
+            alert3.Accept();
 
-            //IWebElement oCheckBox = driver.FindElement(By.CssSelector(input[value = '{myText}']`));
+            //find the span Id
+            //IWebElement e = driver.FindElement(By.XPath("//span[@id='selectionVal']"));
+
+            //Extract the TextContent From SpanTag and put it in a Var//
+            //string myDrop = (string)((IJavaScriptExecutor)driver).ExecuteScript("return arguments[0].firstChild.textContent;", rob);
+
+            // IWebElement dropBox = driver.FindElement(By.("")).FindElement(By.CssSelector($"input[value='{myDrop}']"));
+            //dropBox.Click();
+
+            //SelectElement selectElement = new SelectElement(element)
+            //IList<IWebElement> elements = selectElement.Options;
+
+
+            IWebElement rob = driver.FindElement(By.XPath("//span[@id='selectionVal']"));
+
+            //Extract the TextContent From SpanTag and put it in a Var//
+            string myDrop = (string)((IJavaScriptExecutor)driver).ExecuteScript("return arguments[0].firstChild.textContent;", rob);
+
+            IWebElement dropDown = driver.FindElement(By.XPath($"//div[@id='Box4']/p[1]/select[1]"));
+            dropDown.Click();
+            IWebElement dropDown1 = driver.FindElement(By.CssSelector($"option[value='{myDrop}']"));
+            dropDown1.Click();
 
 
 
-            //IWebElement oCheckBox = driver.FindElement(By.CssSelector("input[value='{myText}']"));
+
+
+
 
         }
 

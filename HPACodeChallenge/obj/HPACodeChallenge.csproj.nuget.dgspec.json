@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jksig\\source\\repos\\HPACodeChallenge\\HPACodeChallenge\\HPACodeChallenge.csproj": {}
+    "C:\\Users\\jksig\\workspace\\HPACodeChallenge\\HPACodeChallenge\\HPACodeChallenge.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jksig\\source\\repos\\HPACodeChallenge\\HPACodeChallenge\\HPACodeChallenge.csproj": {
+    "C:\\Users\\jksig\\workspace\\HPACodeChallenge\\HPACodeChallenge\\HPACodeChallenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jksig\\source\\repos\\HPACodeChallenge\\HPACodeChallenge\\HPACodeChallenge.csproj",
+        "projectUniqueName": "C:\\Users\\jksig\\workspace\\HPACodeChallenge\\HPACodeChallenge\\HPACodeChallenge.csproj",
         "projectName": "HPACodeChallenge",
-        "projectPath": "C:\\Users\\jksig\\source\\repos\\HPACodeChallenge\\HPACodeChallenge\\HPACodeChallenge.csproj",
+        "projectPath": "C:\\Users\\jksig\\workspace\\HPACodeChallenge\\HPACodeChallenge\\HPACodeChallenge.csproj",
         "packagesPath": "C:\\Users\\jksig\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jksig\\source\\repos\\HPACodeChallenge\\HPACodeChallenge\\obj\\",
+        "outputPath": "C:\\Users\\jksig\\workspace\\HPACodeChallenge\\HPACodeChallenge\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -46,6 +46,18 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.0.0-alpha03, )"
+            },
+            "WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[26.14.313457.1, )"
+            },
+            "WebDriverChromeDriver": {
+              "target": "Package",
+              "version": "[2.10.0, )"
             }
           },
           "imports": [

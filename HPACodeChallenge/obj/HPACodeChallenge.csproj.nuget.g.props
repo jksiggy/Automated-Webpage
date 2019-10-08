@@ -15,4 +15,8 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.2.0\build\netcoreapp2.2\Microsoft.NETCore.App.props" Condition="Exists('C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.2.0\build\netcoreapp2.2\Microsoft.NETCore.App.props')" />
   </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgWebDriverChromeDriver Condition=" '$(PkgWebDriverChromeDriver)' == '' ">C:\Users\jksig\.nuget\packages\webdriverchromedriver\2.10.0</PkgWebDriverChromeDriver>
+    <PkgWebDriver_ChromeDriver Condition=" '$(PkgWebDriver_ChromeDriver)' == '' ">C:\Users\jksig\.nuget\packages\webdriver.chromedriver\26.14.313457.1</PkgWebDriver_ChromeDriver>
+  </PropertyGroup>
 </Project>

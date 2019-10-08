@@ -9,3 +9,14 @@ C:\Users\jksig\source\repos\HPACodeChallenge\HPACodeChallenge\obj\Debug\netcorea
 C:\Users\jksig\source\repos\HPACodeChallenge\HPACodeChallenge\obj\Debug\netcoreapp2.2\HPACodeChallenge.AssemblyInfo.cs
 C:\Users\jksig\source\repos\HPACodeChallenge\HPACodeChallenge\obj\Debug\netcoreapp2.2\HPACodeChallenge.dll
 C:\Users\jksig\source\repos\HPACodeChallenge\HPACodeChallenge\obj\Debug\netcoreapp2.2\HPACodeChallenge.pdb
+C:\Users\jksig\workspace\HPACodeChallenge\HPACodeChallenge\bin\Debug\netcoreapp2.2\HPACodeChallenge.deps.json
+C:\Users\jksig\workspace\HPACodeChallenge\HPACodeChallenge\bin\Debug\netcoreapp2.2\HPACodeChallenge.runtimeconfig.json
+C:\Users\jksig\workspace\HPACodeChallenge\HPACodeChallenge\bin\Debug\netcoreapp2.2\HPACodeChallenge.runtimeconfig.dev.json
+C:\Users\jksig\workspace\HPACodeChallenge\HPACodeChallenge\bin\Debug\netcoreapp2.2\HPACodeChallenge.dll
+C:\Users\jksig\workspace\HPACodeChallenge\HPACodeChallenge\bin\Debug\netcoreapp2.2\HPACodeChallenge.pdb
+C:\Users\jksig\workspace\HPACodeChallenge\HPACodeChallenge\obj\Debug\netcoreapp2.2\HPACodeChallenge.csprojAssemblyReference.cache
+C:\Users\jksig\workspace\HPACodeChallenge\HPACodeChallenge\obj\Debug\netcoreapp2.2\HPACodeChallenge.csproj.CoreCompileInputs.cache
+C:\Users\jksig\workspace\HPACodeChallenge\HPACodeChallenge\obj\Debug\netcoreapp2.2\HPACodeChallenge.AssemblyInfoInputs.cache
+C:\Users\jksig\workspace\HPACodeChallenge\HPACodeChallenge\obj\Debug\netcoreapp2.2\HPACodeChallenge.AssemblyInfo.cs
+C:\Users\jksig\workspace\HPACodeChallenge\HPACodeChallenge\obj\Debug\netcoreapp2.2\HPACodeChallenge.dll
+C:\Users\jksig\workspace\HPACodeChallenge\HPACodeChallenge\obj\Debug\netcoreapp2.2\HPACodeChallenge.pdb

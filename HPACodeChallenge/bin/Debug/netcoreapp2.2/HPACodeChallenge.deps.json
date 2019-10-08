@@ -1,16 +1,42 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "signature": "acf917c6c5b685c72a44eef53db20f1e09f34078"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.2": {
       "HPACodeChallenge/1.0.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.0.0-alpha03",
+          "WebDriver.ChromeDriver": "26.14.313457.1",
+          "WebDriverChromeDriver": "2.10.0"
+        },
         "runtime": {
           "HPACodeChallenge.dll": {}
         }
-      }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2.23222"
+          }
+        }
+      },
+      "Selenium.WebDriver/4.0.0-alpha03": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "WebDriver.ChromeDriver/26.14.313457.1": {},
+      "WebDriverChromeDriver/2.10.0": {}
     }
   },
   "libraries": {
@@ -18,6 +44,34 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Newtonsoft.Json/12.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "path": "newtonsoft.json/12.0.2",
+      "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    },
+    "Selenium.WebDriver/4.0.0-alpha03": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kHCOSxirWQqVtcXWVroG7E3mgrGxduJIteUwOCQk2GOad054+ePfZOeK8OizhEMTwUnkDsd9goG1ZdlzIPvkXw==",
+      "path": "selenium.webdriver/4.0.0-alpha03",
+      "hashPath": "selenium.webdriver.4.0.0-alpha03.nupkg.sha512"
+    },
+    "WebDriver.ChromeDriver/26.14.313457.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/d6N/cxrAUaApPE9kp4km/ivMowlg7TSmgmYJL9fcUFa+Hq6pgCDlxO8aDlczW1cwdQG7lbDsQpnXduyUQbJqw==",
+      "path": "webdriver.chromedriver/26.14.313457.1",
+      "hashPath": "webdriver.chromedriver.26.14.313457.1.nupkg.sha512"
+    },
+    "WebDriverChromeDriver/2.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OWQLYlmWe1ZKTn+nZ7PDxeoiHoJ8Ctm0ZrWl/s2ahebf1MPF9E8kly/8TnYdarQ8xNzQc+TUHSb/aM9E7AwYLA==",
+      "path": "webdriverchromedriver/2.10.0",
+      "hashPath": "webdriverchromedriver.2.10.0.nupkg.sha512"
     }
   }
 }

@@ -54,28 +54,66 @@ namespace HPACodeChallenge
             IAlert alert3 = driver.SwitchTo().Alert();
             alert3.Accept();
 
-            //find the span Id
-            //IWebElement e = driver.FindElement(By.XPath("//span[@id='selectionVal']"));
-
-            //Extract the TextContent From SpanTag and put it in a Var//
-            //string myDrop = (string)((IJavaScriptExecutor)driver).ExecuteScript("return arguments[0].firstChild.textContent;", rob);
-
-            // IWebElement dropBox = driver.FindElement(By.("")).FindElement(By.CssSelector($"input[value='{myDrop}']"));
-            //dropBox.Click();
-
-            //SelectElement selectElement = new SelectElement(element)
-            //IList<IWebElement> elements = selectElement.Options;
-
 
             IWebElement rob = driver.FindElement(By.XPath("//span[@id='selectionVal']"));
 
             //Extract the TextContent From SpanTag and put it in a Var//
             string myDrop = (string)((IJavaScriptExecutor)driver).ExecuteScript("return arguments[0].firstChild.textContent;", rob);
 
+            //Narrow it downt to drop down element and click ops//
             IWebElement dropDown = driver.FindElement(By.XPath($"//div[@id='Box4']/p[1]/select[1]"));
             dropDown.Click();
+
+            //choose the right value match the string  and click ops//
             IWebElement dropDown1 = driver.FindElement(By.CssSelector($"option[value='{myDrop}']"));
             dropDown1.Click();
+
+            //Approval for Alert step3//
+            IAlert alert4 = driver.SwitchTo().Alert();
+            alert4.Accept();
+
+
+            //Form Step5 incomplete only choose the first four beacuse of sharing same id//
+            IWebElement forDate = driver.FindElement(By.Id("formDate"));
+            forDate.Clear();
+            forDate.SendKeys("2017-05-04");
+
+            IWebElement forCity = driver.FindElement(By.Id("formCity"));
+            forCity.Clear();
+            forCity.SendKeys("Nashville");
+
+            IWebElement forState = driver.FindElement(By.Id("formState"));
+            forState.Clear();
+            forState.SendKeys("Tennessee");
+
+            IWebElement forCountry = driver.FindElement(By.Id("formCountry"));
+            forCountry.Clear();
+            forCountry.SendKeys("USA");
+
+            //IWebElement ofDate = driver.FindElement(By.XPath($"//div[@class='FormPlaceholder']/table[@id='FormTable']/input[5]"));
+
+            IWebElement ofDate = driver.FindElement(By.Id("formDate"));
+            ofDate.Clear();
+            ofDate.SendKeys("2009-08-26");
+
+            IWebElement ofCity = driver.FindElement(By.Id("formCity"));
+            ofCity.Clear();
+            ofCity.SendKeys("Seattle");
+
+            IWebElement ofState = driver.FindElement(By.Id("formState"));
+            ofState.Clear();
+            ofState.SendKeys("Washington");
+
+            IWebElement ofCountry = driver.FindElement(By.Id("formCountry"));
+            ofCountry.Clear();
+            ofCountry.SendKeys("USA");
+
+            IWebElement onDate = driver.FindElement(By.Id("formDate"));
+            onDate.Clear();
+            onDate.SendKeys("2007-10-10");
+
+
+
 
 
 

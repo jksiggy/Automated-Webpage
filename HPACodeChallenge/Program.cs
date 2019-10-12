@@ -1,6 +1,7 @@
 ﻿
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -68,61 +69,100 @@ namespace HPACodeChallenge
             IWebElement dropDown1 = driver.FindElement(By.CssSelector($"option[value='{myDrop}']"));
             dropDown1.Click();
 
-            //Approval for Alert step3//
+            //Approval for Alert step4//
             IAlert alert4 = driver.SwitchTo().Alert();
             alert4.Accept();
 
 
-            //Form Step5 incomplete only choose the first four beacuse of sharing same id//
-            IWebElement forDate = driver.FindElement(By.Id("formDate"));
-            forDate.Clear();
-            forDate.SendKeys("2017-05-04");
+            //Step Five get the value from the placeholder attribute
+            List<IWebElement> dateof = driver.FindElements(By.Id("formDate")).ToList();
+            foreach (var date in dateof)
+            {
+                var dateVal = date.GetAttribute("placeholder").ToString();
+                date.SendKeys($"{dateVal}");
+            }
 
-            IWebElement forCity = driver.FindElement(By.Id("formCity"));
-            forCity.Clear();
-            forCity.SendKeys("Nashville");
+            List<IWebElement> cityOf = driver.FindElements(By.Id("formCity")).ToList();
+            foreach (var city in cityOf)
+            {
+                var cityIn = city.GetAttribute("placeholder").ToString();
+                city.SendKeys($"{cityIn}");
+            }
 
-            IWebElement forState = driver.FindElement(By.Id("formState"));
-            forState.Clear();
-            forState.SendKeys("Tennessee");
+            List<IWebElement> stateOf = driver.FindElements(By.Id("formState")).ToList();
+            foreach (var state in stateOf)
+            {
+                var stateOn = state.GetAttribute("placeholder").ToString();
+                state.SendKeys($"{stateOn}");
+            }
 
-            IWebElement forCountry = driver.FindElement(By.Id("formCountry"));
-            forCountry.Clear();
-            forCountry.SendKeys("USA");
+            List<IWebElement> countryOf = driver.FindElements(By.Id("formCountry")).ToList();
+            foreach (var country in countryOf)
+            {
+                var countryIn = country.GetAttribute("placeholder").ToString();
+                country.SendKeys($"{countryIn}");
+            }
+            ///submit the form//
+            var getSubmitButton = driver.FindElement(By.TagName("button"));
+            getSubmitButton.Click();
 
-            //IWebElement ofDate = driver.FindElement(By.XPath($"//div[@class='FormPlaceholder']/table[@id='FormTable']/input[5]"));
+            //Approval for Alert step5//
+            IAlert alert5 = driver.SwitchTo().Alert();
+            alert5.Accept();
 
-            IWebElement ofDate = driver.FindElement(By.Id("formDate"));
-            ofDate.Clear();
-            ofDate.SendKeys("2009-08-26");
+            //step6 get the result id, and get the lind id to insert the result value//
+            var resultValue = driver.FindElement(By.Id("formResult")).Text;
+            var insertLine = driver.FindElement(By.Id("lineNum")).Text;
 
-            IWebElement ofCity = driver.FindElement(By.Id("formCity"));
-            ofCity.Clear();
-            ofCity.SendKeys("Seattle");
+            //get the specific line and delete the previous value and inster the result value//
+            var rowValue = driver.FindElement(By.XPath($"//*[@id='inputTable']/tbody/tr[{insertLine}]/td[2]/input"));
+            rowValue.Clear();
+            rowValue.SendKeys($"{resultValue}");
+            rowValue.SendKeys(Keys.Enter);
 
-            IWebElement ofState = driver.FindElement(By.Id("formState"));
-            ofState.Clear();
-            ofState.SendKeys("Washington");
+            //Approval for Alert step6//
+            IAlert alert6 = driver.SwitchTo().Alert();
+            alert6.Accept();
 
-            IWebElement ofCountry = driver.FindElement(By.Id("formCountry"));
-            ofCountry.Clear();
-            ofCountry.SendKeys("USA");
+            bool IsAlertShown(IWebDriver drv)
+            {
+                try
+                {
+                    drv.SwitchTo().Alert();
+                }
+                catch (NoAlertPresentException ex)
+                {
+                    return false;
+                }
+                return true;
+            }
 
-            IWebElement onDate = driver.FindElement(By.Id("formDate"));
-            onDate.Clear();
-            onDate.SendKeys("2007-10-10");
+            //List of step number
+            List<int> numbers = new List<int>()
+            {
+                7, 8, 9, 10
+            };
+
+            //Run through a foreach for each number that is in the list
+            foreach (var number in numbers)
+            {
+                //Find each element by id ex. Box7, Box8, Box9, Box10
+                var steps = driver.FindElements(By.Id($"Box{number}"));
+
+                //Run through another foreach loop to click on each element, await the delay, then accept the alert
+                foreach (var step in steps)
+                {
+                    step.Click();
+                    var awaitAlert = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+                    awaitAlert.Until(drv => IsAlertShown(drv));
+                    alert.Accept();
 
 
 
 
-
-
-
-
-
-
+                }
+            }
         }
-
 
     }
 }
